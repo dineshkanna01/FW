@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="50509" started-at="2021-10-22T07:45:20Z" finished-at="2021-10-22T07:46:11Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="50509" started-at="2021-10-22T07:45:20Z" finished-at="2021-10-22T07:46:11Z">
+      <class name="testcases.HomePage">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@45b9a632]" name="setup" is-config="true" duration-ms="13153" started-at="2021-10-22T07:45:20Z" finished-at="2021-10-22T07:45:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="title()[pri:1, instance:testcases.HomePage@45b9a632]" name="title" duration-ms="78" started-at="2021-10-22T07:45:33Z" finished-at="2021-10-22T07:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- title -->
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@45b9a632]" name="browerClose" is-config="true" duration-ms="890" started-at="2021-10-22T07:45:34Z" finished-at="2021-10-22T07:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browerClose -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@45b9a632]" name="setup" is-config="true" duration-ms="10718" started-at="2021-10-22T07:45:34Z" finished-at="2021-10-22T07:45:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="imgTest()[pri:2, instance:testcases.HomePage@45b9a632]" name="imgTest" duration-ms="143" started-at="2021-10-22T07:45:45Z" finished-at="2021-10-22T07:45:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- imgTest -->
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@45b9a632]" name="browerClose" is-config="true" duration-ms="840" started-at="2021-10-22T07:45:45Z" finished-at="2021-10-22T07:45:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browerClose -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@45b9a632]" name="setup" is-config="true" duration-ms="9893" started-at="2021-10-22T07:45:46Z" finished-at="2021-10-22T07:45:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="dDnIndustries()[pri:3, instance:testcases.HomePage@45b9a632]" name="dDnIndustries" duration-ms="3019" started-at="2021-10-22T07:45:56Z" finished-at="2021-10-22T07:45:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dDnIndustries -->
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@45b9a632]" name="browerClose" is-config="true" duration-ms="824" started-at="2021-10-22T07:45:59Z" finished-at="2021-10-22T07:46:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browerClose -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@45b9a632]" name="setup" is-config="true" duration-ms="9616" started-at="2021-10-22T07:46:00Z" finished-at="2021-10-22T07:46:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="btnConnect()[pri:4, instance:testcases.HomePage@45b9a632]" name="btnConnect" duration-ms="158" started-at="2021-10-22T07:46:09Z" finished-at="2021-10-22T07:46:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- btnConnect -->
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@45b9a632]" name="browerClose" is-config="true" duration-ms="911" started-at="2021-10-22T07:46:10Z" finished-at="2021-10-22T07:46:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browerClose -->
+      </class> <!-- testcases.HomePage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
