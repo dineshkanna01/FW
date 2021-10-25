@@ -6,7 +6,9 @@
       <class name="testcases.HomePage">
         <methods>
           <include name="btnConnect"/>
+          <include name="imgTest"/>
           <include name="setup"/>
+          <include name="dDnIndustries"/>
           <include name="browerClose"/>
         </methods>
       </class> <!-- testcases.HomePage -->
