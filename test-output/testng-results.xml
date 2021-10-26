@@ -2,56 +2,56 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50890" started-at="2021-10-25T06:53:48Z" finished-at="2021-10-25T06:54:39Z">
+  <suite name="Default suite" duration-ms="49751" started-at="2021-10-26T06:13:54Z" finished-at="2021-10-26T06:14:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50890" started-at="2021-10-25T06:53:48Z" finished-at="2021-10-25T06:54:39Z">
+    <test name="Default test" duration-ms="49751" started-at="2021-10-26T06:13:54Z" finished-at="2021-10-26T06:14:44Z">
       <class name="testcases.HomePage">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@6ac13091]" name="setup" is-config="true" duration-ms="11518" started-at="2021-10-25T06:53:48Z" finished-at="2021-10-25T06:53:59Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@3c73951]" name="setup" is-config="true" duration-ms="10851" started-at="2021-10-26T06:13:54Z" finished-at="2021-10-26T06:14:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="title()[pri:1, instance:testcases.HomePage@6ac13091]" name="title" duration-ms="120" started-at="2021-10-25T06:53:59Z" finished-at="2021-10-25T06:54:00Z">
+        <test-method status="PASS" signature="title()[pri:1, instance:testcases.HomePage@3c73951]" name="title" duration-ms="92" started-at="2021-10-26T06:14:05Z" finished-at="2021-10-26T06:14:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- title -->
-        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@6ac13091]" name="browerClose" is-config="true" duration-ms="907" started-at="2021-10-25T06:54:00Z" finished-at="2021-10-25T06:54:00Z">
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@3c73951]" name="browerClose" is-config="true" duration-ms="804" started-at="2021-10-26T06:14:05Z" finished-at="2021-10-26T06:14:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browerClose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@6ac13091]" name="setup" is-config="true" duration-ms="9945" started-at="2021-10-25T06:54:00Z" finished-at="2021-10-25T06:54:10Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@3c73951]" name="setup" is-config="true" duration-ms="11372" started-at="2021-10-26T06:14:06Z" finished-at="2021-10-26T06:14:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="imgTest()[pri:2, instance:testcases.HomePage@6ac13091]" name="imgTest" duration-ms="117" started-at="2021-10-25T06:54:10Z" finished-at="2021-10-25T06:54:11Z">
+        <test-method status="PASS" signature="imgTest()[pri:2, instance:testcases.HomePage@3c73951]" name="imgTest" duration-ms="96" started-at="2021-10-26T06:14:18Z" finished-at="2021-10-26T06:14:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- imgTest -->
-        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@6ac13091]" name="browerClose" is-config="true" duration-ms="878" started-at="2021-10-25T06:54:11Z" finished-at="2021-10-25T06:54:11Z">
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@3c73951]" name="browerClose" is-config="true" duration-ms="803" started-at="2021-10-26T06:14:18Z" finished-at="2021-10-26T06:14:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browerClose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@6ac13091]" name="setup" is-config="true" duration-ms="10228" started-at="2021-10-25T06:54:11Z" finished-at="2021-10-25T06:54:22Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@3c73951]" name="setup" is-config="true" duration-ms="9704" started-at="2021-10-26T06:14:19Z" finished-at="2021-10-26T06:14:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="dDnIndustries()[pri:3, instance:testcases.HomePage@6ac13091]" name="dDnIndustries" duration-ms="2705" started-at="2021-10-25T06:54:22Z" finished-at="2021-10-25T06:54:24Z">
+        <test-method status="PASS" signature="dDnIndustries()[pri:3, instance:testcases.HomePage@3c73951]" name="dDnIndustries" duration-ms="2258" started-at="2021-10-26T06:14:28Z" finished-at="2021-10-26T06:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dDnIndustries -->
-        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@6ac13091]" name="browerClose" is-config="true" duration-ms="778" started-at="2021-10-25T06:54:24Z" finished-at="2021-10-25T06:54:25Z">
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@3c73951]" name="browerClose" is-config="true" duration-ms="696" started-at="2021-10-26T06:14:31Z" finished-at="2021-10-26T06:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browerClose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@6ac13091]" name="setup" is-config="true" duration-ms="9706" started-at="2021-10-25T06:54:25Z" finished-at="2021-10-25T06:54:35Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@3c73951]" name="setup" is-config="true" duration-ms="10053" started-at="2021-10-26T06:14:31Z" finished-at="2021-10-26T06:14:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="btnConnect()[pri:4, instance:testcases.HomePage@6ac13091]" name="btnConnect" duration-ms="2960" started-at="2021-10-25T06:54:35Z" finished-at="2021-10-25T06:54:38Z">
+        <test-method status="PASS" signature="btnConnect()[pri:4, instance:testcases.HomePage@3c73951]" name="btnConnect" duration-ms="2135" started-at="2021-10-26T06:14:41Z" finished-at="2021-10-26T06:14:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- btnConnect -->
-        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@6ac13091]" name="browerClose" is-config="true" duration-ms="818" started-at="2021-10-25T06:54:38Z" finished-at="2021-10-25T06:54:39Z">
+        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@3c73951]" name="browerClose" is-config="true" duration-ms="698" started-at="2021-10-26T06:14:43Z" finished-at="2021-10-26T06:14:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browerClose -->

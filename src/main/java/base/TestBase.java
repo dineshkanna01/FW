@@ -45,6 +45,8 @@ public class TestBase {
 		}else if(browserName.equals("IE")) {
 			WebDriverManager.iedriver().setup();
 			driver=new InternetExplorerDriver();
+		}else {
+			System.out.println("No browser");
 		}
 		
 		driver.manage().window().maximize();

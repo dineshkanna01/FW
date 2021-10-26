@@ -13,11 +13,13 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
+import logfile.Utilitylog;
 import pages.HomePages;
 
 public class HomePage extends TestBase{
 	
 	public static HomePages hp;
+	public static Utilitylog logger;
 	
 	public HomePage() {
 		super();
@@ -27,6 +29,8 @@ public class HomePage extends TestBase{
 	public void setup() {
 		initilization();
 		hp = new HomePages();
+		logger=new Utilitylog(HomePage.class.getName());
+		
 	}
 	
 	@Test(priority=1)
@@ -39,6 +43,7 @@ public class HomePage extends TestBase{
 	public void title() {
 		String title = hp.UrlTilte();
 		System.out.println(title);
+		logger.info(title);
 		Assert.assertEquals(title, "IGT Solutions: BPM, IT and Digital Services & Solutions Provider");
 	}
 	
@@ -51,7 +56,10 @@ public class HomePage extends TestBase{
 	@Step("Verify LOGO Presence")
 	public void imgTest() {
 		boolean logo = hp.Logo();
+		logger.info("image test started");
 		Assert.assertTrue(logo);
+		logger.info("image test ended");
+		
 	}
 	
 	@Test(priority=3)
@@ -62,7 +70,9 @@ public class HomePage extends TestBase{
 	@Story("Story: Industries Dropdown Presence")
 	@Step("Verify Industries Dropdown Presence")
 	public void dDnIndustries() {
+		logger.info("Homepage Details test started");
 		hp.txtHomepages();
+		logger.info("Homepage Details test ended");
 	}
 	
 	@Test(priority=4)
@@ -73,7 +83,9 @@ public class HomePage extends TestBase{
 	@Story("Story: QUICKCONNECT Presence")
 	@Step("Verify QUICKCONNECT Presence")
 	public void btnConnect() {
+		logger.info("Homepage Details test started for Quickconnect");
 		hp.txtConnect();
+		logger.info("Homepage Details test ended for Quickconnect");
 	}
 	
 	@AfterMethod
