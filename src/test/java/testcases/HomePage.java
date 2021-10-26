@@ -1,6 +1,9 @@
 package testcases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -72,6 +75,7 @@ public class HomePage extends TestBase{
 	public void dDnIndustries() {
 		logger.info("Homepage Details test started");
 		hp.txtHomepages();
+		screenShot("Hp_of_Games");
 		logger.info("Homepage Details test ended");
 	}
 	
@@ -85,11 +89,17 @@ public class HomePage extends TestBase{
 	public void btnConnect() {
 		logger.info("Homepage Details test started for Quickconnect");
 		hp.txtConnect();
+		screenShot("Hp_of_QC");
 		logger.info("Homepage Details test ended for Quickconnect");
 	}
 	
 	@AfterMethod
 	public void browerClose() {
 		driver.quit();
+	}
+	
+	@AfterClass
+	public void report() {
+		cmdPrompt();
 	}
 }
