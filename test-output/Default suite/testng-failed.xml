@@ -3,15 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.HomePage">
+      <class name="testcases.CSVTestCase">
         <methods>
-          <include name="btnConnect"/>
-          <include name="imgTest"/>
-          <include name="setup"/>
-          <include name="dDnIndustries"/>
-          <include name="browerClose"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- testcases.HomePage -->
+      </class> <!-- testcases.CSVTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

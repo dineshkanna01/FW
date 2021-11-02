@@ -1,0 +1,5 @@
+testcaseid,scenario,description,expected,actual,status
+tc1,to open loginpage,enter url and enter the button,show the login page,display the loginpage,pass
+tc2,checking with un and without pwd,enter the un click on submit,please enter pwd,please enter pwd,pass
+tc3,checking without un and with pwd,enter the pwd click on submit,please enter un,please enter un,pass
+tc4,checking with pwd and un,enter un and pwd and click on submit,go to homepage,go to homepage,pass

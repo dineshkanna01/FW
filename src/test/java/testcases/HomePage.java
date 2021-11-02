@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -50,21 +51,21 @@ public class HomePage extends TestBase{
 		Assert.assertEquals(title, "IGT Solutions: BPM, IT and Digital Services & Solutions Provider");
 	}
 	
-	@Test(priority=2)
-	@Description("Verify the company LOGO on the HomePage...")
-	@Severity(SeverityLevel.MINOR)
-	@Epic("EP01")
-	@Feature("Feature2: LOGO")
-	@Story("Story: LOGO Presence")
-	@Step("Verify LOGO Presence")
-	public void imgTest() {
-		boolean logo = hp.Logo();
-		logger.info("image test started");
-		Assert.assertTrue(logo);
-		logger.info("image test ended");
-		
-	}
-	
+//	@Test(priority=2)
+//	@Description("Verify the company LOGO on the HomePage...")
+//	@Severity(SeverityLevel.MINOR)
+//	@Epic("EP01")
+//	@Feature("Feature2: LOGO")
+//	@Story("Story: LOGO Presence")
+//	@Step("Verify LOGO Presence")
+//	public void imgTest() {
+//		boolean logo = hp.Logo();
+//		logger.info("image test started");
+//		Assert.assertTrue(logo);
+//		logger.info("image test ended");
+//		
+//	}
+//	
 	@Test(priority=3)
 	@Description("Verify the Details on the HomePage...")
 	@Severity(SeverityLevel.NORMAL)
@@ -78,20 +79,20 @@ public class HomePage extends TestBase{
 		screenShot("Hp_of_Games");
 		logger.info("Homepage Details test ended");
 	}
-	
-	@Test(priority=4)
-	@Description("Verify the Details on the HomePage...")
-	@Severity(SeverityLevel.CRITICAL)
-	@Epic("EP01")
-	@Feature("Feature4: QUICKCONNECT")
-	@Story("Story: QUICKCONNECT Presence")
-	@Step("Verify QUICKCONNECT Presence")
-	public void btnConnect() {
-		logger.info("Homepage Details test started for Quickconnect");
-		hp.txtConnect();
-		screenShot("Hp_of_QC");
-		logger.info("Homepage Details test ended for Quickconnect");
-	}
+//	
+//	@Test(priority=4)
+//	@Description("Verify the Details on the HomePage...")
+//	@Severity(SeverityLevel.CRITICAL)
+//	@Epic("EP01")
+//	@Feature("Feature4: QUICKCONNECT")
+//	@Story("Story: QUICKCONNECT Presence")
+//	@Step("Verify QUICKCONNECT Presence")
+//	public void btnConnect() {
+//		logger.info("Homepage Details test started for Quickconnect");
+//		hp.txtConnect();
+//		screenShot("Hp_of_QC");
+//		logger.info("Homepage Details test ended for Quickconnect");
+//	}
 	
 	@AfterMethod
 	public void browerClose() {
@@ -99,7 +100,14 @@ public class HomePage extends TestBase{
 	}
 	
 	@AfterClass
-	public void report() {
+	public void report() throws Exception {
 		cmdPrompt();
+		sendingMail();
+	}
+	
+	@AfterTest
+	public void email() throws Exception {
+		con();
+		select("select * from emplyees");
 	}
 }

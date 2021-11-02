@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38317" started-at="2021-10-26T10:27:10Z" finished-at="2021-10-26T10:27:48Z">
+  <suite name="Default suite" duration-ms="208" started-at="2021-11-02T05:08:25Z" finished-at="2021-11-02T05:08:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38317" started-at="2021-10-26T10:27:10Z" finished-at="2021-10-26T10:27:48Z">
-      <class name="testcases.HomePage">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@3c73951]" name="setup" is-config="true" duration-ms="11164" started-at="2021-10-26T10:27:10Z" finished-at="2021-10-26T10:27:21Z">
+    <test name="Default test" duration-ms="208" started-at="2021-11-02T05:08:25Z" finished-at="2021-11-02T05:08:26Z">
+      <class name="testcases.CSVTestCase">
+        <test-method status="PASS" signature="f()[pri:0, instance:testcases.CSVTestCase@223aa2f7]" name="f" duration-ms="89" started-at="2021-11-02T05:08:26Z" finished-at="2021-11-02T05:08:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="dDnIndustries()[pri:3, instance:testcases.HomePage@3c73951]" name="dDnIndustries" duration-ms="13333" started-at="2021-10-26T10:27:21Z" finished-at="2021-10-26T10:27:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dDnIndustries -->
-        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@3c73951]" name="browerClose" is-config="true" duration-ms="693" started-at="2021-10-26T10:27:34Z" finished-at="2021-10-26T10:27:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browerClose -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.HomePage@3c73951]" name="setup" is-config="true" duration-ms="9668" started-at="2021-10-26T10:27:35Z" finished-at="2021-10-26T10:27:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="btnConnect()[pri:4, instance:testcases.HomePage@3c73951]" name="btnConnect" duration-ms="2595" started-at="2021-10-26T10:27:45Z" finished-at="2021-10-26T10:27:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- btnConnect -->
-        <test-method status="PASS" signature="browerClose()[pri:0, instance:testcases.HomePage@3c73951]" name="browerClose" is-config="true" duration-ms="764" started-at="2021-10-26T10:27:47Z" finished-at="2021-10-26T10:27:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browerClose -->
-      </class> <!-- testcases.HomePage -->
+        </test-method> <!-- f -->
+      </class> <!-- testcases.CSVTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -6,10 +6,21 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.Email;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.SimpleEmail;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -63,9 +74,10 @@ public class TestBase {
 	}
 
 	public static void screenShot(String fileName) {
+		prop = new Properties();
 		File file=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("C:/Users/Dinesh.Kanna/eclipse-workspace/IGT/Screenshots/"+fileName+".jpg"));
+			FileUtils.copyFile(file, new File("ScreenshotPath/"+fileName+".jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -93,6 +105,84 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void mail() throws Exception {
+		Email email = new SimpleEmail();
+		email.setHostName("smtp-mail.outlook.com");
+		email.setSmtpPort(587);
+		email.setAuthenticator(new DefaultAuthenticator("username", "password"));
+		email.setSSLOnConnect(true);
+		email.setFrom("dinesh.kanna@igtsolutions.com");
+		email.setSubject("TestMail");
+		email.setMsg("This is a test mail ... :-)");
+		email.addTo("dinesh.kanna@igtsolutions.com");
+		email.send();
+	}
+	
+//	public static void jdbc() throws Exception {
+//		Class.forName("com.mysql.jdbc.Driver");
+//		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sample","root","8080");
+//		
+//		Statement st = con.createStatement();
+//		ResultSet rs = st.executeQuery("select*from Employees");
+//		
+//		while (rs.next()) {
+//			int s = rs.getInt("S.no");
+//			String name = rs.getString("username");
+//			String pass = rs.getString("password");
+//			System.out.println(name);
+//			System.out.println(pass);
+//		}
+//		st.close();
+//		con.close();
+//	}
+	
+	public static void sendingMail() {
+		Runtime r = Runtime.getRuntime();
+//		r.addShutdownHook(new Thread());
+		Mail m= new Mail();
+		try {
+			m.mail();
+			System.out.println("Report sent");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+//		try {
+//			Thread.sleep(6000);
+//		} catch (Exception e) {
+//			System.out.println(e);
+//		}
+	
 
-
+	}
+	
+	
+	public static Connection con() {
+		try {
+			 String JDBC_Driver = "com.mysql.jdbc.Driver";
+			 String urlDB = "jdbc:mysql://localhost:3306/DBname";
+			 String user = "dineshkanna";
+			 String pass = "123456";
+			 Class.forName(JDBC_Driver);
+			 Connection connect=DriverManager.getConnection(urlDB, user, pass);
+			 return connect;
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+		
+	}
+	
+	public static ArrayList<String> select(String query) throws Exception  {
+		Connection conn = con();
+		PreparedStatement statement = conn.prepareStatement(query);
+		
+		ResultSet result = statement.executeQuery();
+		ArrayList<String> array = new ArrayList<String>();
+		while (result.next()) {
+			array.add(result.getString("url"));
+		}
+		return array;
+		
+	}
 }
