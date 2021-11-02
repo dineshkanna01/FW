@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -28,8 +30,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonSyntaxException;
+
 import Utility.TestUtils;
 import cmdprompt.SyncPipe;
+import helper.JsonHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -184,5 +190,24 @@ public class TestBase {
 		}
 		return array;
 		
+	}
+	
+	
+	public static String jsonFile(String User, String jsonLocation, String value) throws Exception {
+		JsonHelper helper=new JsonHelper();
+		Map<String,String> map=new HashMap<String,String>();
+		
+		map=helper.readJsonFile(User,jsonLocation);
+		System.out.println(map);
+		System.out.println(map.get(value));
+//		System.out.println(map.get("AadharNumber"));
+//		System.out.println(map.get("DateofBirth"));
+//		
+//		map=helper.readJsonFile("addUser1","UserManagementTest.json");
+//		System.out.println(map);
+//		System.out.println(map.get("userName"));
+//		System.out.println(map.get("AadharNumber"));
+//		System.out.println(map.get("DateofBirth"));
+		return value;
 	}
 }

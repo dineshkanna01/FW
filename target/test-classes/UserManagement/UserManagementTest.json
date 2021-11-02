@@ -1,0 +1,77 @@
+{
+	"addUser": {
+		"id": "12",
+		"userName": "suraj",
+		"DateofBirth": "12-09-1989",
+		"HouseNumber": "H002",
+		"AadharNumber": "874984",
+		"HomeAddressLine1": "12th Main Road",
+		"HomeAddressLine2": "Mahatma Gandhi Nagar",
+		"HomeLandmark": "Near 3-square Mall",
+		"HomePin": "8735989",
+		"OfficeBuildingNumber": "B-002",
+		"OfficeAddressLine1": "25th Square Road",
+		"OfficeAddressLine2": "MG Road",
+		"OfficeLandmark": "Near Dell Company",
+		"EmployeeId": "Emp-002",
+		"OfficePin": "3753298"
+	},
+	"addUser1": {
+		"id": "13",
+		"userName": "sudhakar",
+		"DateofBirth": "12-09-1999",
+		"HouseNumber": "H003",
+		"AadharNumber": "8744567984",
+		"HomeAddressLine1": "1111th Main Road",
+		"HomeAddressLine2": "Gandhi Nagar",
+		"HomeLandmark": "Near 3-square Mall",
+		"HomePin": "8735989",
+		"OfficeBuildingNumber": "B-002",
+		"OfficeAddressLine1": "25th Square Road",
+		"OfficeAddressLine2": "MG Road",
+		"OfficeLandmark": "Near Dell Company",
+		"EmployeeId": "Emp-002",
+		"OfficePin": "3753298"
+	},
+	"addUser2": {
+		"id": "14",
+		"userName": "pasila",
+		"DateofBirth": "12-09-1899",
+		"HouseNumber": "H004",
+		"AadharNumber": "874422984",
+		"HomeAddressLine1": "345th Main Road",
+		"HomeAddressLine2": "Mehandhi Nagar",
+		"HomeLandmark": "Near BSR Mall",
+		"HomePin": "234567",
+		"OfficeBuildingNumber": "B-002",
+		"OfficeAddressLine1": "25th Square Road",
+		"OfficeAddressLine2": "MG Road",
+		"OfficeLandmark": "Near Dell Company",
+		"EmployeeId": "Emp-002",
+		"OfficePin": "765433"
+	},
+	"addUser3": {
+		"id": "15",
+		"userName": "lavanya",
+		"DateofBirth": "12-09-1939",
+		"HouseNumber": "H005",
+		"AadharNumber": "9876543333",
+		"HomeAddressLine1": "2nd Main Road",
+		"HomeAddressLine2": "chrompet Nagar",
+		"HomeLandmark": "Near VR Mall",
+		"HomePin": "234567",
+		"OfficeBuildingNumber": "B-002",
+		"OfficeAddressLine1": "25th Square Road",
+		"OfficeAddressLine2": "MG Road",
+		"OfficeLandmark": "Near Ashokleyland Company",
+		"EmployeeId": "Emp-002",
+		"OfficePin": "6987634"
+	},
+	"updateUser": {
+		"Name": "mahesh",
+		"DateofBirth": "23-03-2001"
+	},
+	"deleteUser": {
+		"UserId": "9"
+	}
+}
