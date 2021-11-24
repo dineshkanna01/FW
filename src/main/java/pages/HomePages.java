@@ -42,4 +42,17 @@ public class HomePages extends TestBase{
 	public void txtConnect() {
 		imgLogo.click();
 	}
+	
+	@FindBy(id="search_arrival_date")
+	WebElement arrivalDate;
+	
+	@FindBy(id="search_departure_date")
+	WebElement departureDate;
+	
+	public HomePages dates(String dateIn, String dateOut) {
+		arrivalDate.sendKeys(dateIn);
+		departureDate.sendKeys(dateOut);
+		return null;
+	}
+	
 }

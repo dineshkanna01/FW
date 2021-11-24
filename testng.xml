@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Testing" parallel="tests">
+<!-- 
+ <test name="Test">
+    <classes>
+      <class name="testcases.HomePage"/>
+    </classes>
+    
+  </test>  
+  -->
+  <test name="FirefoxTest">
+ 		<parameter name="browser" value="firefox" />
+ 		<classes>
+ 			<class name="multibrowser.MBrowser" />
+ 		</classes>
+ 	</test>
+ 	<test name="ChromeTest">
+ 		<parameter name="browser" value= "chrome" />
+ 		<classes>
+ 			<class name="multibrowser.MBrowser" />
+ 		</classes>
+ 	</test>
+ 		
+ 	<test name="IETest">
+ 		<parameter name="browser" value="ie" />
+ 		<classes>
+ 			<class name="multibrowser.MBrowser" />
+ 		</classes>
+ 	</test>
+ 	<!-- 
+ 	<test name="tc1" parallel="tests">
+ 		<classes>
+ 			<class name="testcases.Tc1" />
+ 			<class name="testcases.Tc2" />
+ 			<class name="testcases.Tc3" />
+ 			
+ 		</classes>
+ 	</test>
+ 	-->
+</suite> 

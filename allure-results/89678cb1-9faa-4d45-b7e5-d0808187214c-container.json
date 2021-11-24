@@ -1,0 +1,1 @@
+{"uuid":"89678cb1-9faa-4d45-b7e5-d0808187214c","name":"logging.SecondClass","children":["a38419db-a0ab-4a9c-8f8d-34eb983f54c1"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1637742666312,"stop":1637742666623}],"afters":[],"start":1637742666288,"stop":1637742668502}

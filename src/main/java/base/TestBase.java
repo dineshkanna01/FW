@@ -27,6 +27,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -65,9 +66,9 @@ public class TestBase {
 		else if(browserName.equals("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
-		}else if(browserName.equals("IE")) {
-			WebDriverManager.iedriver().setup();
-			driver=new InternetExplorerDriver();
+		}else if(browserName.equals("ED")) {
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
 		}else {
 			System.out.println("No browser");
 		}
@@ -78,6 +79,25 @@ public class TestBase {
 
 		driver.get(prop.getProperty("url"));
 	}
+	
+	public static void initilizationmultibrowser(String browserName) {
+		if (browserName.equals("chrome")) {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		}
+		else if(browserName.equals("Firefox")) {
+		WebDriverManager.firefoxdriver().setup();
+		driver=new FirefoxDriver();
+		}else if(browserName.equals("IE")) {
+		WebDriverManager.edgedriver().setup();
+		driver=new EdgeDriver();
+		}
+
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICITWAIT, TimeUnit.SECONDS);
+
+		}
 
 	public static void screenShot(String fileName) {
 		prop = new Properties();
@@ -114,14 +134,14 @@ public class TestBase {
 	
 	public static void mail() throws Exception {
 		Email email = new SimpleEmail();
-		email.setHostName("smtp-mail.outlook.com");
-		email.setSmtpPort(587);
-		email.setAuthenticator(new DefaultAuthenticator("username", "password"));
+		email.setHostName("smtp.gmail.com");
+		email.setSmtpPort(465);
+		email.setAuthenticator(new DefaultAuthenticator("sekardineshkanna@gmail.com", "Disser01"));
 		email.setSSLOnConnect(true);
-		email.setFrom("dinesh.kanna@igtsolutions.com");
+		email.setFrom("sekardineshkanna@gmail.com");
 		email.setSubject("TestMail");
 		email.setMsg("This is a test mail ... :-)");
-		email.addTo("dinesh.kanna@igtsolutions.com");
+		email.addTo("sekardineshkanna@gmail.com");
 		email.send();
 	}
 	

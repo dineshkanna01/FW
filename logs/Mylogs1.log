@@ -91,4 +91,50 @@
   2021-11-01 22:14:26-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
   2021-11-01 22:14:38-main--INFO -testcases.HomePage:Homepage Details test started
   2021-11-01 22:14:43-main--INFO -testcases.HomePage:Homepage Details test ended
+  2021-11-05 09:06:52-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-07 16:15:29-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-09 13:19:33-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-09 16:13:50-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-12 16:40:20-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent.ftl"): Found
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh.Kanna/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent.ftl"): Found
+  2021-11-17 08:37:46-main--DEBUG-freemarker.cache:Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh.Kanna/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent.ftl"): Found
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh.Kanna/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:TemplateLoader.findTemplateSource("Extent.ftl"): Found
+  2021-11-17 08:39:36-main--DEBUG-freemarker.cache:Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dinesh.Kanna/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+  2021-11-19 15:19:05-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-19 15:23:07-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-19 15:25:10-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-19 16:20:16-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-19 16:20:38-main--INFO -testcases.HomePage:image test started
+  2021-11-19 16:20:38-main--INFO -testcases.HomePage:image test ended
+  2021-11-22 13:30:12-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-22 13:30:24-main--INFO -testcases.HomePage:image test started
+  2021-11-22 13:30:24-main--INFO -testcases.HomePage:image test ended
+  2021-11-22 13:30:35-main--INFO -testcases.HomePage:Homepage Details test started
+  2021-11-22 13:30:38-main--INFO -testcases.HomePage:Homepage Details test ended
+  2021-11-22 13:31:51-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-22 13:32:03-main--INFO -testcases.HomePage:image test started
+  2021-11-22 13:32:03-main--INFO -testcases.HomePage:image test ended
+  2021-11-22 13:32:15-main--INFO -testcases.HomePage:Homepage Details test started
+  2021-11-22 13:32:20-main--INFO -testcases.HomePage:Homepage Details test ended
+  2021-11-22 13:34:49-main--INFO -testcases.HomePage:IGT Solutions: BPM, IT and Digital Services & Solutions Provider
+  2021-11-22 13:35:01-main--INFO -testcases.HomePage:image test started
+  2021-11-22 13:35:01-main--INFO -testcases.HomePage:image test ended
+  2021-11-22 13:35:13-main--INFO -testcases.HomePage:Homepage Details test started
+  2021-11-22 13:35:17-main--INFO -testcases.HomePage:Homepage Details test ended
   

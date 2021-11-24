@@ -29,7 +29,7 @@ public class Mail {
 	
 	static String key,data,from,to,password;
 	static String[] AllToAddress;
-	static String host="smtp-mail.outlook.com";
+	static String host="smtp-mail.gmail.com";
 	
 	public void getData() throws Exception {
 		File prop= new File("config\\credentials.properties");

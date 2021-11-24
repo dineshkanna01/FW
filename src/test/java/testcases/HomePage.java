@@ -1,6 +1,5 @@
 package testcases;
 
-import java.io.IOException;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -9,6 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import base.SendEmail;
 import base.TestBase;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -51,21 +51,21 @@ public class HomePage extends TestBase{
 		Assert.assertEquals(title, "IGT Solutions: BPM, IT and Digital Services & Solutions Provider");
 	}
 	
-//	@Test(priority=2)
-//	@Description("Verify the company LOGO on the HomePage...")
-//	@Severity(SeverityLevel.MINOR)
-//	@Epic("EP01")
-//	@Feature("Feature2: LOGO")
-//	@Story("Story: LOGO Presence")
-//	@Step("Verify LOGO Presence")
-//	public void imgTest() {
-//		boolean logo = hp.Logo();
-//		logger.info("image test started");
-//		Assert.assertTrue(logo);
-//		logger.info("image test ended");
-//		
-//	}
-//	
+	@Test(priority=2)
+	@Description("Verify the company LOGO on the HomePage...")
+	@Severity(SeverityLevel.MINOR)
+	@Epic("EP01")
+	@Feature("Feature2: LOGO")
+	@Story("Story: LOGO Presence")
+	@Step("Verify LOGO Presence")
+	public void imgTest() {
+		boolean logo = hp.Logo();
+		logger.info("image test started");
+		Assert.assertTrue(logo);
+		logger.info("image test ended");
+		
+	}
+	
 	@Test(priority=3)
 	@Description("Verify the Details on the HomePage...")
 	@Severity(SeverityLevel.NORMAL)
@@ -79,7 +79,7 @@ public class HomePage extends TestBase{
 		screenShot("Hp_of_Games");
 		logger.info("Homepage Details test ended");
 	}
-//	
+	
 //	@Test(priority=4)
 //	@Description("Verify the Details on the HomePage...")
 //	@Severity(SeverityLevel.CRITICAL)
@@ -102,12 +102,13 @@ public class HomePage extends TestBase{
 	@AfterClass
 	public void report() throws Exception {
 		cmdPrompt();
-		sendingMail();
+//		sendingMail();
+		SendEmail.mail();
 	}
 	
 	@AfterTest
 	public void email() throws Exception {
 		con();
-		select("select * from emplyees");
+		select("select * from employees");
 	}
 }
