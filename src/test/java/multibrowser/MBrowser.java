@@ -1,5 +1,6 @@
 package multibrowser;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -23,8 +24,8 @@ public class MBrowser extends TestBase{
 
 		} 
 		// browser if edge 
-		else if(browser.equalsIgnoreCase("ie")) {
-			initilizationmultibrowser("IE");
+		else if(browser.equalsIgnoreCase("edge")) {
+			initilizationmultibrowser("edge");
 
 		}
 	}
@@ -33,6 +34,11 @@ public class MBrowser extends TestBase{
 	@Test
 	public void test() {
 		driver.get(prop.getProperty("url"));
+	}
+	
+	@AfterClass
+	public void afterclass() {
+		driver.close();
 	}
 
 }

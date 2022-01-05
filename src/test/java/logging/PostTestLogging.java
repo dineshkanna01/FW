@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType; 
 
-public class SecondClass {
+public class PostTestLogging {
 	
 	@BeforeClass
 	public void setup() {
@@ -14,20 +14,21 @@ public class SecondClass {
 	
 	@Test
 	void testLogging() {
+		
 		RestAssured.given().
 		contentType(ContentType.JSON).
 		body("\r\n" +
 				"{\r\n" +
-				" \"name\": \"vedio version 11\",\r\n" +
-				" \"description\": \r rest methods example versions 11\",\r\n" +
-				" \"price\": \"1000\"\r\n" +
+				" \"id\": \"2021\"\r\n" +
+				" \"name\": \"Dkanna\",\r\n" +
+				" \"salary\": \765367\",\r\n" +
+				" \"age\": \"20\"\r\n" +
 				"}")
 
 		.when()
-		.log().body()
-		.put("https://chercher.tech/sample/api/product/create"); 
-
-
+		.log()
+		.body()
+		.post("https://dummy.restapiexample.com/api/v1/create");
 
 	}
 

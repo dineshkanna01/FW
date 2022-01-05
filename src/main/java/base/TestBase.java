@@ -23,6 +23,7 @@ import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
+import org.json.simple.JSONObject;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -30,14 +31,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
 
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
+import Utility.ConfigManager;
 import Utility.TestUtils;
 import cmdprompt.SyncPipe;
 import helper.JsonHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 
 public class TestBase {
@@ -88,7 +98,7 @@ public class TestBase {
 		else if(browserName.equals("Firefox")) {
 		WebDriverManager.firefoxdriver().setup();
 		driver=new FirefoxDriver();
-		}else if(browserName.equals("IE")) {
+		}else if(browserName.equals("edge")) {
 		WebDriverManager.edgedriver().setup();
 		driver=new EdgeDriver();
 		}
@@ -230,4 +240,208 @@ public class TestBase {
 //		System.out.println(map.get("DateofBirth"));
 		return value;
 	}
+	
+//	public static void getResponse() {
+	//
+	//		RestAssured.baseURI=BASE_URL;
+	//
+	//		RequestSpecification httpRequest = RestAssured.given();
+	//		Response response = httpRequest.request(Method.GET,"/services/soap/ota/2008a/HotelService/clid/availpro");
+	//
+	//		System.out.println("======Body======");
+	//		String responseBody = response.getBody().asString();
+	//		System.out.println("Respose Body is: " +responseBody);
+	//		Assert.assertEquals(responseBody.contains("success"), true);
+	//
+	//		int statusCode = response.statusCode();
+	//		System.out.println("Status Code: "+statusCode);
+	//		Assert.assertEquals(statusCode, 200);
+	//
+	//		System.out.println("*******Headers*******");
+	//		Headers allheaders = response.headers();
+	//		for (Header header : allheaders) {
+	//			System.out.println(header.getName()+"  :  "+header.getValue());
+	//		}
+	//
+	//		String statusLine = response.getStatusLine();
+	//		System.out.println("Status Code  is:  "+statusLine);
+	//		Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
+	//
+	//		Response res = RestAssured.get("http://dummy.restapiexample.com/api/v1/employees");
+	//		System.out.println("Response : "+res);
+	//		System.out.println("Response Body: "+res.asString());
+	//		System.out.println("Response Body: "+res.getBody().asString());
+	//		System.out.println("Status code: "+res.getStatusCode());
+	//		System.out.println("Status: "+res.getStatusLine());
+	//		System.out.println("Header: "+res.getHeader("content-type"));
+	//		System.out.println("RunTime: "+res.getTime());
+	//	}
+
+	//	public static void PostResponse() {
+	//		RestAssured.baseURI=BASE_URL;
+	//		RequestSpecification httpRequest = RestAssured.given();
+	//		JSONObject requestParam = new JSONObject();
+	//
+	//		//			requestParam.put("name", "dk02");
+	//		//			requestParam.put("salary", "66666");
+	//		//			requestParam.put("age", "28");
+	//
+	//		httpRequest.header("Content-Type", "application/json");
+	//
+	//		httpRequest.body(requestParam.toJSONString());
+	//
+	//		Response response = httpRequest.request(Method.POST,"/services/soap/ota/2008a/HotelService/clid/availpro");
+	//
+	//		String responseBody = response.getBody().toString();
+	//		System.out.println("Respose Body is: " +responseBody);
+	//
+	//		System.out.println("Response Body: "+response.getBody().asString());
+	//		Assert.assertEquals(responseBody.contains("success"), false);
+	//
+	//		int statusCode = response.statusCode();
+	//		System.out.println("Status Code: "+statusCode);
+	//		Assert.assertEquals(statusCode, 204);
+	//
+	//		Headers allheaders = response.headers();
+	//		for (Header header : allheaders) {
+	//			System.out.println(header.getName()+"  :  "+header.getValue());
+	//		}
+	//
+	//		//		String successCode = response.jsonPath().get("SuccessCode");
+	//		//		Assert.assertEquals(successCode, "token");
+	//
+	//		//		String statusLine = response.getStatusLine();
+	//		//		System.out.println("Status Code  is:  "+statusLine);
+	//		//		Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
+	//	}
+	
+	static String BASE_URL = ConfigManager.getInstance().getString("base_url");
+
+	public static void getResponse() {
+
+		RestAssured.baseURI=BASE_URL;
+
+		RequestSpecification httpRequest = RestAssured.given();
+		Response response = httpRequest.request(Method.GET,"/employees");
+
+		System.out.println("======Body======");
+		String responseBody = response.getBody().asString();
+		System.out.println("Respose Body is: " +responseBody);
+		Assert.assertEquals(responseBody.contains("success"), true);
+
+		int statusCode = response.statusCode();
+		System.out.println("Status Code: "+statusCode);
+		Assert.assertEquals(statusCode, 200);
+		
+		System.out.println("*******Headers*******");
+		Headers allheaders = response.headers();
+		for (Header header : allheaders) {
+			System.out.println(header.getName()+"  :  "+header.getValue());
+		}
+
+				String statusLine = response.getStatusLine();
+				System.out.println("Status Code  is:  "+statusLine);
+				Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
+
+		//		Response res = RestAssured.get("http://dummy.restapiexample.com/api/v1/employees");
+		//		System.out.println("Response : "+res);
+		//		System.out.println("Response Body: "+res.asString());
+		//		System.out.println("Response Body: "+res.getBody().asString());
+		//		System.out.println("Status code: "+res.getStatusCode());
+		//		System.out.println("Status: "+res.getStatusLine());
+		//		System.out.println("Header: "+res.getHeader("content-type"));
+		//		System.out.println("RunTime: "+res.getTime());
+	}
+
+		public static void PutResponse() {
+			RestAssured.baseURI=BASE_URL;
+			RequestSpecification httpRequest = RestAssured.given();
+			JSONObject requestParam = new JSONObject();
+	
+			requestParam.put("name", "dk02");
+			requestParam.put("salary", "665666");
+			requestParam.put("age", "28");
+	
+			httpRequest.header("Content-Type", "application/json");
+	
+			httpRequest.body(requestParam.toJSONString());
+	
+			Response response = httpRequest.request(Method.POST,"/create");
+	
+			String responseBody = response.getBody().toString();
+			System.out.println("Respose Body is: " +responseBody);
+			
+			System.out.println("Response Body: "+response.getBody().asString());
+			Assert.assertEquals(responseBody.contains("success"), false);
+			
+			int statusCode = response.statusCode();
+			System.out.println("Status Code: "+statusCode);
+			Assert.assertEquals(statusCode, 200);
+	
+			Headers allheaders = response.headers();
+			for (Header header : allheaders) {
+				System.out.println(header.getName()+"  :  "+header.getValue());
+			}
+			
+			//		String successCode = response.jsonPath().get("SuccessCode");
+			//		Assert.assertEquals(successCode, "token");
+	
+			//		String statusLine = response.getStatusLine();
+			//		System.out.println("Status Code  is:  "+statusLine);
+			//		Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
+		}
+		
+		
+		public static void TryResponse() {
+			RestAssured.baseURI="http://qa-igt-ttconnect.ttaws.com";
+//			RequestSpecification httpRequest = RestAssured.given();
+			String rBody="<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n" + 
+					"    <soap:Header/>\r\n" + 
+					"    <soap:Body>\r\n" + 
+					"        <OTA_HotelRateAmountNotifRQ Version=\"1\" EchoToken=\"1019173874\" TimeStamp=\"2020-08-18T12:52:20.0Z\" xmlns:schemalocation=\"http://www.opentravel.org/OTA/2003/05 OTA_HotelRateAmountNotifRQ.xsd\" xmlns=\"http://www.opentravel.org/OTA/2003/05\">\r\n" + 
+					"            <UniqueID ID=\"1590555868\" Type=\"16\"/>\r\n" + 
+					"            <RateAmountMessages ChainCode=\"UI\" HotelCode=\"qtest1\">\r\n" + 
+					"                <RateAmountMessage>\r\n" + 
+					"                    <StatusApplicationControl InvTypeCode=\"SRK\" IsRoom=\"1\" RatePlanCode=\"FRP2\"/>\r\n" + 
+					"                    <Rates>\r\n" + 
+					"                        <Rate Start=\"2021-12-25\" End=\"2021-12-26\" CurrencyCode=\"USD\" RateTimeUnit=\"Day\" UnitMultiplier=\"1\" Mon=\"1\" Tue=\"1\" Weds=\"1\" Thur=\"1\" Fri=\"1\" Sat=\"1\" Sun=\"1\">\r\n" + 
+					"                            <BaseByGuestAmts>\r\n" + 
+					"                                <BaseByGuestAmt AmountAfterTax=\"300.00\" CurrencyCode=\"USD\" NumberOfGuests=\"2\"/>\r\n" + 
+					"                            </BaseByGuestAmts>\r\n" + 
+					"                        </Rate>\r\n" + 
+					"                    </Rates>\r\n" + 
+					"                </RateAmountMessage>\r\n" + 
+					"            </RateAmountMessages>\r\n" + 
+					"        </OTA_HotelRateAmountNotifRQ>\r\n" + 
+					"    </soap:Body>\r\n" + 
+					"</soap:Envelope>";
+			
+			Response response = RestAssured.given()
+					.contentType(ContentType.XML)
+					.accept(ContentType.XML)
+					.body(rBody).when().redirects().follow(true).redirects().max(100).post("/services/soap/ota/2008a/HotelService/clid/availpro");
+
+
+//			int statusCode = response.statusCode();
+//			System.out.println("Status Code: "+statusCode);
+//			Assert.assertEquals(statusCode, 201);
+//			System.out.println("Header: "+response.getHeader("content-type"));
+//			System.out.println("returned full html /n" + response.getBody().asString());
+			
+			String responseBody = response.getBody().toString();
+			System.out.println("Respose Body is: " +responseBody);
+			
+			System.out.println("Response Body: "+response.getBody().asString());
+			Assert.assertEquals(responseBody.contains("success"), false);
+			
+			int statusCode = response.statusCode();
+			System.out.println("Status Code: "+statusCode);
+			Assert.assertEquals(statusCode, 200);
+	
+			Headers allheaders = response.headers();
+			for (Header header : allheaders) {
+				System.out.println(header.getName()+"  :  "+header.getValue());
+			}
+		}
+
 }
